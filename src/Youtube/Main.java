@@ -6,9 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //String immutable 180604
+        String s = "localhost";
 
+        StringBuilder sb = new StringBuilder();
+        sb.append("localhost");
+
+        s.concat("//8080");
+        sb.append("//8080");
+        s = "//8080";
+        System.out.println(s);
+        System.out.println(sb.toString());
         /*
-        //String builder learning
+        //String builder learning 180601
         String info = "";
         info += "My name is Li";
         info += " ";
