@@ -1,12 +1,58 @@
 package Youtube;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //String immutable 180604
+
+/*
+        //Array review 180604
+        //Arrays.equals(f,q)   System.copyarray(f,startPosition,q,starPosition,length) Java.util.Arrays.copyOfRange(f,startPosition,endPosition)
+        //Declare of an array
+        int[] a = {1,3,5,7,9};
+        int[] b = {2,4,6,8,10,12};
+        System.out.println("Array a is:");
+        for(int i:a){
+            System.out.println(i);
+        }
+        System.out.println("Array b is:");
+        for(int i:b){
+            System.out.println(i);
+        }
+        System.arraycopy(a,1,b,2,2);
+        System.out.println("After arraycopy array a is:");
+        for(int i:a){
+            System.out.println(i);
+        }
+        System.out.println("After arryacopy array b is:");
+        for(int i:b){
+            System.out.println(i);
+        }
+
+        a[0] = b[1];
+        System.out.println(a[0]);
+
+        printArray(a);
+        System.out.println(Arrays.equals(a,b));
+
+        int [] c = {};
+        c = java.util.Arrays.copyOfRange(a,1,4);
+        for(int i:c){
+            System.out.println(i);
+        }*/
+
+        /*char[] copyFrom = {'d', 'e', 'c', 'a', 'f', 'f', 'e',
+                'i', 'n', 'a', 't', 'e', 'd'};
+
+        char[] copyTo = java.util.Arrays.copyOfRange(copyFrom, 2, 9);
+
+        System.out.println(new String(copyTo));*/
+
+
+        /*//String immutable 180604
         String s = "localhost";
 
         StringBuilder sb = new StringBuilder();
@@ -16,7 +62,7 @@ public class Main {
         sb.append("//8080");
         s = "//8080";
         System.out.println(s);
-        System.out.println(sb.toString());
+        System.out.println(sb.toString());*/
         /*
         //String builder learning 180601
         String info = "";
@@ -129,5 +175,10 @@ public class Main {
             e.printStackTrace();
             }
         }*/
+    }
+    private static void printArray(int[] a){
+        System.out.println("Print an array through invoking a method");
+        for(int i :a)
+            System.out.println(i);
     }
 }
