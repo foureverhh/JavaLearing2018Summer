@@ -8,7 +8,30 @@ public class Main {
     public static void main(String[] args) {
 
 
-/*
+        //multi-dimensional array 180608
+        int [][] m = new int[4][6];
+        int [][] n = new int[3][5];
+
+       for(int i = 0; i < m.length;i++){
+            for(int j = 0; j< m[i].length; j++){
+                m[i][j] = i+j;
+                System.out.print(m[i][j]+" ");
+            }
+           System.out.println();
+       }
+
+       for(int i = 0; i < n.length; i++) //Iterate each row
+           for(int j = 0; j < n[i].length; j++)
+               n[i][j] = i*j;
+       //Initial a triangle array
+       int[][] h = new int[4][];
+       for(int i = 0 ; i < h.length; i++ )
+           h[i] = new int[i+1];
+
+       printMultiDimensionalArray(n);
+        System.out.println("The sum of column 4 in array n is:"+getMultiDimenArrayColSum(n,3));
+        System.out.println("The sum of row 2 in array n is:"+getMultiDimenArrayRowSum(n,1));*/
+
         //Array review 180604
         //Arrays.equals(f,q)   System.copyarray(f,startPosition,q,starPosition,length) Java.util.Arrays.copyOfRange(f,startPosition,endPosition)
         //Declare of an array
@@ -180,5 +203,29 @@ public class Main {
         System.out.println("Print an array through invoking a method");
         for(int i :a)
             System.out.println(i);
+    }
+
+    private static void printMultiDimensionalArray(int[][] a){
+        System.out.println("Print a multi-dimensional array by invoking a method");
+        for(int[] row : a) {//Iterate the row
+            for (int i : row)
+                System.out.print(i + " ");
+            System.out.println();
+        }
+    }
+
+    private static int getMultiDimenArrayColSum(int[][] a, int whichCol ){
+        int sum = 0;
+        for(int i = 0; i<a.length; i++)
+            sum = sum + a[i][whichCol];
+        return sum;
+    }
+
+    private static int getMultiDimenArrayRowSum(int[][] a, int whichRow){
+        //int[] row = new int[a[whichRow].length];// to get the length of the row picked up
+        int sum = 0;
+        for(int i = 0; i < a[whichRow].length; i++)
+            sum = sum + a[whichRow][i];
+        return sum;
     }
 }
